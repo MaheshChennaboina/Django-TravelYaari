@@ -25,7 +25,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="travel-navbar">
+            <div class="{% static 'collapse navbar-collapse' %}" id="travel-navbar">
                 <ul class="navbar-nav ml-auto">
                     <li class="{% static 'nav-item px-3' %}">
                         <a href="#home" class="nav-link">Home</a>
@@ -48,6 +48,13 @@
                     </li>
                     <li class="{% static 'nav-item px-3' %}">
                         <a href="#contact" class="nav-link">hello,{{user.first_name}}</a>
+                     {%if user.is_authenticated%}
+                    <li class="{% static 'nav-item px-3' %}">
+                        <a href="accounts/logout" class="nav-link">logout</a>
+                    </li>
+                    <li class="{% static 'nav-item px-3' %}">
+                        <a href="" class="nav-link">hello,{{user.first_name}}</a>
+
                     </li>
                      {%else%}
                     <li class="{% static 'nav-item px-3'">
@@ -356,9 +363,9 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h3>Copyright &copy; 2021 , Travel Yaari Pvt Ltd</h3>
+                    <h3>Copyright &copy; 2020 , Travel Yari Pvt Ltd</h3>
                     <h6>All Rights Reserved</h6>
-                    <h6>Developed & Maintained by WAD Group 38</h6>
+                    <h6>Developed & Maintained WAD Group 38</h6>
                 </div>
             </div>
         </div>
