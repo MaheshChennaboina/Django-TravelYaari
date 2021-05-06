@@ -42,12 +42,20 @@
                     <li class="{% static 'nav-item px-3' %}">
                         <a href="#contact" class="nav-link">Contact</a>
                     </li>
+                    {%if user.is_authenticated%}
+                    <li class="{% static 'nav-item px-3' %}">
+                        <a href="#contact" class="nav-link">logout</a>
+                    </li>
+                    <li class="{% static 'nav-item px-3' %}">
+                        <a href="#contact" class="nav-link">hello,{{user.first_name}}</a>
+                    </li>
+                     {%else%}
                     <li class="{% static 'nav-item px-3'">
                         <a href="accounts/signup" class="nav-link">Register</a>
                     </li>
                     <li class="{% static 'nav-item px-3'">
                         <a href="accounts/login" class="nav-link">Login</a>
-                    </li>
+                    {%endif%}    
                 </ul>
             </div>
         </div>
