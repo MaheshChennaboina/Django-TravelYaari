@@ -44,4 +44,3 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')      
-
