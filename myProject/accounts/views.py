@@ -44,3 +44,5 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')      
+def onlyuser(request):
+    return redirect('signup')
