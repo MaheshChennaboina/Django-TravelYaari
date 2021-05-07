@@ -23,11 +23,26 @@
             background-attachment: fixed;
             background-size: cover;
         }
+            .message{
+            color: #f9fafb;
+            font-family: 'Open Sans', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        
+        }
     </style>
 </head>
 
 <body>
-    </script>
+     <div class="message">
+
+            {% for message in messages %}
+            <h3> {{message}} </h3>
+            {% endfor %}
+    
+        </div>
     <div class="row display-flex">
         <div class="col-sm-6 col-xs-6 col-md-4 col-md-offset-4" id="signup-intro-form">
             <form action="signup" id="signup-form" class="signup-form" method="post">
