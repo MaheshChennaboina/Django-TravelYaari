@@ -34,9 +34,23 @@
                     <li class="{% static 'nav-item px-3' %}">
                         <a href="#search" class="nav-link">Search</a>
                     </li>
-                    <li class="{% static 'nav-item px-3' %}">
-                        <a href="#places" class="nav-link">Visiting Spots</a>
-                    </li>
+                    <li class="dropdown nav-item px-3 ">
+                        <button onclick="myFunction()" class="dropbtn"><a href="" class="nav-link">Visiting Spots</a></button>
+                        {% if user.is_authenticated %}
+                        <div id="myDropdown" class="dropdown-content">
+                           <a href="#">Andhra Pradesh</a>
+                           <a href="#">Telangana</a>
+                            <a href="#">karnataka</a>
+                            <a href="#">kerala</a>
+                           <a href="#">TamilNadu</a>
+                    </div>
+                    {% else %}
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="accounts/onlyuser">Only for users</a>
+                    </div>
+                    {%endif%}
+
+                </li>   
                     <li class="{% static 'nav-item px-3' %}">
                         <a href="#gallery" class="nav-link">Gallery</a>
                     </li>
